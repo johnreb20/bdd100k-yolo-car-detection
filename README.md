@@ -93,11 +93,12 @@ runs/detect/
 
 ## Repository Structure
 
-
-preprocessing/ # Label conversion, analysis, downsampling
-training/ # Training, validation, test scripts
-results/ # Metrics and selected qualitative outputs
-runs/ # Auto-generated YOLO outputs (ignored)
+bdd100k-yolo-car-detection/
+├── configs/ # Dataset configuration files
+├── preprocessing/ # Label conversion, analysis, downsampling
+├── training/ # Training, validation, test scripts
+├── results/ # Metrics and selected qualitative outputs
+└── runs/ # Auto-generated YOLO outputs (ignored)
 
 
 ---
