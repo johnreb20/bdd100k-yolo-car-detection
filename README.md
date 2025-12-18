@@ -36,12 +36,11 @@ Scripts are available under:
 ## Training
 Model training is performed using the Ultralytics YOLOv8 command-line interface.
 
-```bash
+```
 bash training/train.sh
 ```
 Which runs:
 
-bash
 ```
 yolo detect train \
   data=configs/bdd_car_small.yaml \
@@ -53,7 +52,7 @@ yolo detect train \
 Evaluation
 Validation and test evaluation are performed using:
 ```
-bash
+
 ```
 bash training/val.sh
 bash training/test.sh
@@ -63,11 +62,7 @@ These commands compute:
 
 Precision
 
-Recall
 
-mAP@0.5
-
-mAP@0.5:0.95
 
 Results
 | Split | Precision | Recall | mAP@0.5 | mAP@0.5:0.95 |
@@ -81,17 +76,17 @@ Inference speed is approximately 3 ms per image on an NVIDIA RTX 4060 GPU.
 Inference
 To generate qualitative results on the test set:
 
-bash
-Copy code
+
+```
 yolo detect predict \
   model=runs/detect/exp_wandb2/weights/best.pt \
   source=bdd_small/images/test \
   conf=0.5 \
   save=True
+```
+
 Predicted images are saved under:
 
-bash
-Copy code
 runs/detect/
 Repository Structure
 pgsql
@@ -113,5 +108,6 @@ All experiments are reproducible using the provided scripts.
 Requirements
 Install dependencies with:
 
-bash
+```
 pip install -r requirements.txt
+```
