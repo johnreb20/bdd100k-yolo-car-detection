@@ -33,16 +33,16 @@ The following preprocessing steps are performed:
    Training data is downsampled using stratified sampling (by time-of-day) to reduce compute cost while preserving data diversity.
 
 Scripts are available under:
-
 ## Training
 Model training is performed using the Ultralytics YOLOv8 command-line interface.
 
-bash
+```bash
 bash training/train.sh
+```
 Which runs:
 
 bash
-Copy code
+```
 yolo detect train \
   data=configs/bdd_car_small.yaml \
   model=yolov8s.pt \
@@ -52,11 +52,12 @@ yolo detect train \
   device=0
 Evaluation
 Validation and test evaluation are performed using:
-
+```
 bash
+```
 bash training/val.sh
 bash training/test.sh
-
+```
 
 These commands compute:
 
@@ -69,9 +70,11 @@ mAP@0.5
 mAP@0.5:0.95
 
 Results
-Split	Precision	Recall	mAP@0.5	mAP@0.5:0.95
-Val	0.832	0.673	0.765	0.475
-Test	0.833	0.671	0.766	0.475
+| Split | Precision | Recall | mAP@0.5 | mAP@0.5:0.95 |
+|------|-----------|--------|----------|--------------|
+| Val  | 0.832     | 0.673  | 0.765    | 0.475        |
+| Test | 0.833     | 0.671  | 0.766    | 0.475        |
+
 
 Inference speed is approximately 3 ms per image on an NVIDIA RTX 4060 GPU.
 
