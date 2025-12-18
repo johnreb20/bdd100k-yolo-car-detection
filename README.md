@@ -92,6 +92,7 @@ runs/detect/
 ---
 
 ## Repository Structure
+
 configs/ # Dataset configuration files
 preprocessing/ # Label conversion, analysis, downsampling
 training/ # Training, validation, test scripts
